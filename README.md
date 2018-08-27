@@ -1,4 +1,4 @@
-# Ultima IV World v 0.90
+# Ultima IV World v 0.94
 World: https://drrak.github.io/ultima.4/
 
 Descriptions of cities: www.the-spoiler.com/RPG/Origin/ultima.4.2.html
