@@ -235,7 +235,47 @@ Crescent Waning
 2. Skara Brae
 (3. Magincia)" style="left:2992px;top:2672px">Moongate</a>
 
-<a id="cr" href="https://github.com/drrak/ultima4">&copy; 2018 3dh</a>
+<a id="cr" href="https://github.com/drrak/ultima4"><span id="y"></span> <span id="x"></span> &copy; 2018 3dh</a>
+<script>
+var box = document.querySelector("body");
+var pageX = document.getElementById("x");
+var pageY = document.getElementById("y");
+
+function updateDisplay(event) {
+  yy = Math.round((8+event.pageY)/16-1).toString(16);
+  xx = Math.round((8+event.pageX)/16-1).toString(16);
+  
+  var mapObj = {
+   '0':'A',
+   '1':'B',
+   '2':'C',
+   '3':'D',
+   '4':'E',
+   '5':'F',
+   '6':'G',
+   '7':'H',
+   '8':'I',
+   '9':'J',
+   'a':'K',
+   'b':'L',
+   'c':'M',
+   'd':'N',
+   'e':'O',
+   'f':'P'
+  };
+  
+  pageY.innerText = yy.replace(/[0123456789abcdef]/g, m => mapObj[m]);
+  pageX.innerText = xx.replace(/[0123456789abcdef]/g, m => mapObj[m]);
+  
+  if ((event.pageX)<256){pageX.innerText = "A" + pageX.innerText;};
+  if ((event.pageY)<256){pageY.innerText = "A" + pageY.innerText;};
+
+};
+
+box.addEventListener("mousemove", updateDisplay, false);
+box.addEventListener("mouseenter", updateDisplay, false);
+box.addEventListener("mouseleave", updateDisplay, false);
+</script>
 </div>
 </body>
 </html>
