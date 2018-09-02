@@ -254,8 +254,8 @@ pageX.innerText = xx.replace(/0/g,'A').replace(/1/g,'B').replace(/2/g,'C').repla
 
 if ((event.pageX)<256){pageX.innerText = 'A' + pageX.innerText;}
 if ((event.pageY)<256){pageY.innerText = 'A' + pageY.innerText;}
-if ((event.pageX)>4095){pageX.innerText = 'PP';}
-if ((event.pageY)>4095){pageY.innerText = 'PP';}
+if ((event.pageX)>4091){pageX.innerText = 'PP';}
+if ((event.pageY)>4091){pageY.innerText = 'PP';}
 }
 
 box.addEventListener('mousemove', updateDisplay, false);
