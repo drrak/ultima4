@@ -243,8 +243,8 @@ var pageX = document.getElementById('x');
 var pageY = document.getElementById('y');
 
 function updateDisplay(event) {
-yy = Math.round((8+event.pageY)/16-1).toString(16);
-xx = Math.round((8+event.pageX)/16-1).toString(16);
+yy = Math.round((event.pageY-8)/16).toString(16);
+xx = Math.round((event.pageX-8)/16).toString(16);
 
 //var mapObj = {'0':'A','1':'B','2':'C','3':'D','4':'E','5':'F','6':'G','7':'H','8':'I','9':'J','a':'K','b':'L','c':'M','d':'N','e':'O','f':'P'};
 //pageY.innerText = yy.replace(/[0123456789abcdef]/g, m => mapObj[m]);
